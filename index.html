@@ -4,240 +4,466 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ffe8f0">
-<title>For My Hrudya 💗</title>
+<meta name="theme-color" content="#fff0f5">
+<title>For My Golu Molu 💗</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --pink:#f16b98;
+  --deep:#bd3e70;
+  --pale:#fff0f5;
+  --ink:#573548;
+  --cream:#fffaf1;
+}
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  font-family:"Trebuchet MS",Arial,sans-serif;
-  color:#714057;background:#fff5f8;overflow-x:hidden;
+  margin:0;background:var(--pale);color:var(--ink);
+  font-family:"DM Sans",sans-serif;overflow-x:hidden;
+}
+button{font:inherit;cursor:pointer;border:0}
+button:focus-visible,a:focus-visible{outline:3px solid #a53c70;outline-offset:4px}
+button:active{transform:scale(.96)}
+a{color:inherit}
+.scene{
+  min-height:90vh;display:flex;align-items:center;justify-content:center;
+  padding:85px 20px;position:relative;overflow:hidden;
+}
+.wrap{width:min(850px,100%);position:relative;z-index:2}
+.eyebrow{
+  text-transform:uppercase;letter-spacing:3px;font-size:11px;
+  font-weight:700;color:var(--deep)
+}
+.script{font-family:"Dancing Script",cursive}
+.display{
+  font-family:"Playfair Display",serif;
+  font-size:clamp(40px,8vw,76px);line-height:1.08;
+  letter-spacing:-1.5px;margin:18px 0;color:#8f345c
+}
+.sub{font-size:16px;line-height:1.9;max-width:520px;margin:0 auto}
+.btn{
+  padding:14px 23px;border-radius:40px;font-weight:700;
+  transition:transform .2s,box-shadow .2s;background:white;color:var(--deep);
+  box-shadow:0 5px 18px #b84c7415
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 9px 22px #b84c7428}
+.btn-primary{background:linear-gradient(135deg,#f783a8,#e64d83);color:white}
+.btn-soft{background:#fff;color:#b83f70;border:1px solid #f8c2d4}
+.btn-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}
+.tag{
+  display:inline-flex;align-items:center;gap:7px;padding:9px 15px;
+  border-radius:50px;background:#fff9;border:1px solid #fff;
+  font-size:12px;font-weight:700
+}
+
+/* floating decoration */
+.decor{position:absolute;pointer-events:none;user-select:none;z-index:1}
+.d1{left:7%;top:18%;font-size:35px;animation:sway 4s ease-in-out infinite}
+.d2{right:8%;top:22%;font-size:27px;animation:sway 3.5s ease-in-out infinite reverse}
+.d3{left:12%;bottom:15%;font-size:24px;animation:sway 5s ease-in-out infinite}
+.d4{right:10%;bottom:18%;font-size:39px;animation:sway 4.5s ease-in-out infinite}
+@keyframes sway{50%{transform:translateY(-13px) rotate(9deg)}}
+@keyframes rise{to{transform:translateY(-110vh) rotate(40deg);opacity:0}}
+@keyframes pop{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
+
+/* welcome */
+.hero{
+  min-height:100svh;text-align:center;
+  background:
+    radial-gradient(ellipse at 15% 25%,#ffd3e3 0,transparent 34%),
+    radial-gradient(ellipse at 85% 80%,#fbd7e4 0,transparent 35%),
+    linear-gradient(140deg,#fff8f8,#fff0f5);
+}
+.hero .wrap{padding:35px 0}
+.hero-sticker{font-size:clamp(65px,15vw,112px);margin:15px 0 22px;line-height:1.3}
+.hero h1 em{font-family:"Dancing Script",cursive;color:#e74e85;font-style:normal}
+.hero .display{max-width:750px;margin:20px auto}
+.hero .sub{max-width:480px}
+.scroll-hint{margin-top:42px;font-size:12px;letter-spacing:1px;opacity:.7}
+.down{display:block;font-size:24px;margin-top:6px;animation:sway 2s infinite}
+
+/* apology */
+.apology{background:#fffaf4;text-align:center}
+.section-heading{text-align:center;margin-bottom:35px}
+.section-heading h2{
+  font:600 clamp(34px,6vw,52px) "Playfair Display",serif;
+  margin:12px 0;color:#8f345c
+}
+.apology-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.apology-card{
+  padding:27px 16px 25px;background:white;border:1px solid #f4e0e6;
+  border-radius:24px;box-shadow:0 12px 35px #8b39530a;
+  transition:transform .25s
+}
+.apology-card:hover{transform:translateY(-6px) rotate(-1deg)}
+.apology-card .emoji{font-size:47px;margin-bottom:15px}
+.apology-card h3{font-size:16px;margin:0 0 8px}
+.apology-card p{font-size:13px;line-height:1.8;margin:0;color:#866b78}
+
+/* letter */
+.letter-scene{
+  background:linear-gradient(145deg,#ffe5ee,#fff1f5 60%,#fbe5ef);
   text-align:center
 }
-button{
-  border:0;border-radius:30px;padding:13px 21px;
-  font:inherit;font-weight:bold;cursor:pointer;
-  transition:transform .2s,background .2s
+.envelope-area{margin:35px auto 10px;max-width:440px}
+.envelope{
+  width:min(320px,85vw);height:205px;margin:auto;position:relative;
+  background:#f4a3bd;border-radius:8px 8px 15px 15px;
+  box-shadow:0 18px 45px #a94d701e;cursor:pointer;
+  transition:transform .3s
 }
-button:hover{transform:translateY(-3px)}
-.pink{background:#f45c91;color:white;box-shadow:0 6px 15px #f45c9133}
-.white{background:white;color:#d9437b;border:2px solid #ffc4d7}
-.hero{
-  min-height:100vh;padding:35px 16px;display:grid;place-items:center;
-  background:radial-gradient(circle at 15% 20%,#ffdce9,transparent 35%),
-  radial-gradient(circle at 90% 75%,#ffdfeb,transparent 35%),#fff5f8
+.envelope:hover{transform:translateY(-4px)}
+.envelope:before{
+  content:"";position:absolute;inset:0;
+  background:#ffd6e3;clip-path:polygon(0 0,50% 60%,100% 0);
+  z-index:2;transition:transform .6s;transform-origin:top
 }
-.card{
-  width:min(720px,100%);padding:32px 22px;border-radius:32px;
-  background:#ffffffdf;border:2px solid white;
-  box-shadow:0 20px 60px #d65b861c
+.envelope:after{
+  content:"";position:absolute;inset:0;
+  background:#f8b7cb;clip-path:polygon(0 100%,50% 45%,100% 100%);
+  z-index:3
 }
-.sticker{font-size:76px;animation:bob 2s ease-in-out infinite}
-@keyframes bob{50%{transform:translateY(-9px) rotate(4deg)}}
-h1{font: bold clamp(40px,9vw,68px) Georgia,serif;color:#e44d83;margin:14px 0}
-h2{font-size:clamp(25px,6vw,36px);color:#df4d80;margin:12px 0 18px}
-p{font-size:16px;line-height:1.85}
-.pill{display:inline-block;background:#ffe1ec;border-radius:30px;padding:9px 15px;margin:12px 0;font-size:13px}
-.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:22px}
-section{padding:60px 16px;position:relative}
-.paper,.gamebox{
-  width:min(680px,100%);margin:22px auto;padding:27px 21px;
-  background:white;border:2px dashed #ffb1ca;border-radius:25px;
-  box-shadow:0 12px 35px #dc729511
+.envelope.open:before{transform:rotateX(180deg);z-index:0}
+.envelope .seal{
+  position:absolute;left:50%;top:43%;transform:translate(-50%,-50%);
+  font-size:38px;z-index:4;transition:.3s
 }
-.letter{display:none;text-align:left;white-space:pre-line;line-height:1.95;margin-top:22px}
-.letter.show{display:block;animation:fade .4s ease}
-@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.reasons{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;max-width:700px;margin:25px auto}
-.reason{background:white;border:2px solid #ffe0eb;border-radius:20px;padding:20px 10px}
-.reason div{font-size:38px;margin-bottom:9px}
-.reason p{font-size:14px;line-height:1.6;margin-top:6px}
-#response,#moodText,#finalMessage{min-height:30px;margin:18px auto 0;font-weight:bold;color:#d9437b;line-height:1.8}
-#confetti{position:fixed;inset:0;pointer-events:none;z-index:10;overflow:hidden}
-.floating{position:fixed;bottom:-50px;pointer-events:none;z-index:8;animation:rise linear forwards}
-@keyframes rise{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
-.pastel{background:#ffedf3}
-.bigemoji{font-size:65px;margin:15px}
-footer{background:#ffe2ec;padding:30px 15px;line-height:2}
-.small{font-size:12px;color:#95677b}
-@media(max-width:450px){
- .card{padding:28px 16px}
- .reasons{grid-template-columns:1fr 1fr}
- .buttons button{width:100%;max-width:300px}
- section{padding:48px 14px}
+.envelope.open .seal{opacity:0}
+.envelope-label{margin-top:18px;font-size:13px;color:#a14e70}
+
+/* real letter paper */
+.paper{
+  max-width:660px;margin:38px auto 0;background:#fffdf7;
+  padding:clamp(24px,6vw,55px);text-align:left;position:relative;
+  border-radius:3px;box-shadow:0 18px 50px #a45a751e;
+  border-top:6px solid #ed9ab7;
+  background-image:repeating-linear-gradient(
+    transparent,transparent 34px,#f4e9df 35px
+  );
+  display:none;animation:pop .5s ease
+}
+.paper.show{display:block}
+.paper .stamp{font-size:35px;text-align:right}
+.paper .letter-date{font-size:11px;letter-spacing:1px;color:#a67b8b}
+.paper h3{font:700 clamp(30px,6vw,42px) "Dancing Script",cursive;color:#b33c6d;margin:17px 0}
+.paper p{
+  font:500 17px/2 "Dancing Script",cursive;color:#674454;
+  margin:0 0 14px
+}
+.paper .signoff{font-size:22px;margin-top:25px}
+.paper .signature{font-size:34px;font-weight:700;color:#bd3e70}
+.paper .ps{
+  margin-top:23px;padding:12px 15px;border-left:3px solid #ee84a9;
+  background:#fff0f5;font-size:22px
+}
+
+/* little interactive mood */
+.mood-scene{background:#fffaf4;text-align:center}
+.mood-board{
+  max-width:600px;margin:auto;padding:30px 20px;border-radius:30px;
+  background:white;border:1px solid #f1dfe6;
+  box-shadow:0 15px 45px #a34e7010
+}
+.mood-face{font-size:72px;margin:10px 0}
+.mood-result{min-height:65px;font-size:15px;line-height:1.8;margin-top:20px}
+.mood-options{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:18px}
+.mood-options button{background:#fff1f6;border:1px solid #f7d4e1;color:#91415f;padding:12px 15px;border-radius:25px}
+
+/* surprise */
+.final{
+  text-align:center;min-height:85vh;
+  background:radial-gradient(ellipse at 50% 40%,#ffd6e5,transparent 52%),#fff0f5
+}
+.final .wrap{max-width:700px}
+.final .big-heart{font-size:85px;animation:heartbeat 1.5s infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.13)}30%{transform:scale(1)}45%{transform:scale(1.08)}}
+.final .display{font-size:clamp(37px,7vw,61px)}
+.footer{padding:27px 15px;text-align:center;background:#fffaf4;font-size:12px;color:#987486;line-height:2}
+#toast{
+  position:fixed;bottom:22px;left:50%;transform:translate(-50%,25px);
+  width:max-content;max-width:90%;padding:13px 19px;border-radius:30px;
+  background:#71384f;color:white;font-size:13px;opacity:0;
+  pointer-events:none;z-index:20;transition:.3s;box-shadow:0 7px 25px #6a344b33
+}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.heart-float{position:fixed;bottom:-35px;z-index:15;pointer-events:none;animation:rise 4s linear forwards}
+@media(max-width:650px){
+ .scene{min-height:auto;padding:75px 18px}
+ .hero{min-height:100svh}
+ .apology-grid{grid-template-columns:1fr}
+ .apology-card{display:grid;grid-template-columns:58px 1fr;text-align:left;align-items:center;column-gap:12px;padding:17px}
+ .apology-card .emoji{grid-row:span 2;font-size:38px;margin:0;text-align:center}
+ .apology-card h3{align-self:end}
+ .apology-card p{align-self:start}
+ .d1{left:4%;top:8%}.d2{right:4%;top:12%}
+ .paper p{font-size:17px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}
 }
 </style>
 </head>
 
 <body>
-<div id="confetti"></div>
 
-<header class="hero">
-  <div class="card">
-    <div class="sticker">🧸💗🐻</div>
-    <div class="pill">A very important message for Hrudya 💌</div>
-    <h1>Hey, Hrudya! 🥺</h1>
-    <h2>Gussa ho kya mujhse? 👉👈</h2>
-    <p>
-      Achha baba, suno na… 🥹<br>
-      Meri pyaari si Hrudya ko smile karte hue dekhna hai.
-      Tumhari smile ke saamne toh meri arguments ki battery low ho jaati hai. 🔋😂
+<!-- SCENE 1: WELCOME -->
+<section class="scene hero">
+  <span class="decor d1">🎀</span>
+  <span class="decor d2">✨</span>
+  <span class="decor d3">🌷</span>
+  <span class="decor d4">💌</span>
+
+  <div class="wrap">
+    <span class="tag">♡ A tiny website, a big feeling ♡</span>
+    <div class="hero-sticker">🐻‍❄️💗🧸</div>
+    <div class="eyebrow">For one very special person</div>
+    <h1 class="display">Hey, my <em>Hrudya</em>…</h1>
+    <p class="sub">
+      I think someone is a little upset with me. 🥺<br>
+      And someone else has been thinking about how to make her smile.
     </p>
-    <div class="sticker">🥺👉👈</div>
-    <p><b>Thoda sa pyaar, thodi si maafi… aur ek chhoti si smile milegi?</b> 💗</p>
-    <div class="buttons">
-      <button class="pink" onclick="openLetter()">Read My Little Letter 💌</button>
-      <button class="white" onclick="hug()">Virtual Hug 🫂</button>
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="goTo('letter')">I have something for you 💌</button>
+      <button class="btn btn-soft" onclick="sendHug()">Need a hug first? 🫂</button>
     </div>
-    <p class="small" style="margin-top:20px">Made by someone who misses your smile. 🙈</p>
-  </div>
-</header>
-
-<section>
-  <h2>Official Apology Department 🥹</h2>
-  <p>Madam Hrudya, please review the following very serious documents.</p>
-  <div class="reasons">
-    <article class="reason"><div>🐻</div><b>Exhibit A</b><p>One extremely sorry teddy bear.</p></article>
-    <article class="reason"><div>🐱</div><b>Exhibit B</b><p>One cat requesting peace negotiations.</p></article>
-    <article class="reason"><div>🍫</div><b>Exhibit C</b><p>Chocolate-level affection and virtual hugs.</p></article>
-    <article class="reason"><div>💗</div><b>Exhibit D</b><p>A heart that genuinely wants you happy.</p></article>
-  </div>
-  <div class="buttons">
-    <button class="pink" onclick="apology()">Accept My Apology? 🥺</button>
-    <button class="white" onclick="evidence()">Need More Evidence 😂</button>
-  </div>
-  <p id="response" aria-live="polite"></p>
-</section>
-
-<section class="pastel">
-  <h2>A Tiny Love Letter 💌</h2>
-  <p>Written with love, a little nervousness, and 1000 imaginary hugs.</p>
-  <div class="paper">
-    <div class="sticker">💌🌷</div>
-    <button class="pink" id="letterBtn" onclick="openLetter()">Open Your Letter 💗</button>
-    <div class="letter" id="letter">Hrudya, meri pyaari si jaan ❤️
-
-Mujhe nahi pata ki tum abhi kitna gussa ho, but I do know that your feelings matter to me.
-
-Agar meri kisi baat ya action se tumhe hurt hua hai, toh I'm genuinely sorry. Main tumhari feelings ko lightly nahi lena chahta. I want to understand what upset you and do better.
-
-Tum mere liye special ho — sirf tab nahi jab tum happy ho, but also when you're upset, tired, or need some space.
-
-Main tumhe force nahi karunga ki tum turant maan jao. Bas jab tum ready ho, I want to listen, understand, and make things right.
-
-Aur haan… tumhari smile ki bahut yaad aati hai. 🥹💗
-
-Ek virtual teddy hug tumhare liye:
-🧸🤗💐
-
-With lots of love,
-Tumhara Kaushik ❤️</div>
+    <div class="scroll-hint">MADE WITH LOVE, JUST FOR YOU<span class="down">↓</span></div>
   </div>
 </section>
 
-<section>
-  <h2>Choose Your Current Mood, Madam 😭</h2>
-  <p>There are no wrong answers. (Please don't choose the last one. 🥲)</p>
-  <div class="gamebox">
-    <div class="bigemoji" id="moodEmoji">🤨</div>
-    <div class="buttons">
-      <button class="white" onclick="mood('😤','Thoda sa gussa abhi bhi hai!')">Still angry 😤</button>
-      <button class="white" onclick="mood('🥹💗','Thoda sa pighal rahi hoon…')">A little softer 🥹</button>
-      <button class="pink" onclick="mood('🥰🫂','Sending you the biggest virtual hug!')">Okay, hug me 🤗</button>
+<!-- SCENE 2: APOLOGY -->
+<section class="scene apology">
+  <span class="decor d1">💕</span>
+  <span class="decor d4">🌸</span>
+  <div class="wrap">
+    <div class="section-heading">
+      <div class="eyebrow">A very serious little investigation</div>
+      <h2>The Case of the<br>Upset Golu Molu 🕵️‍♂️</h2>
+      <p class="sub">The suspect has been identified. It's me. 😭</p>
     </div>
-    <p id="moodText"></p>
+
+    <div class="apology-grid">
+      <article class="apology-card">
+        <div class="emoji">🐻</div>
+        <h3>One sorry teddy</h3>
+        <p>He has travelled a very long way to deliver one hug.</p>
+      </article>
+      <article class="apology-card">
+        <div class="emoji">🥺</div>
+        <h3>Two puppy eyes</h3>
+        <p>They have been activated. Please use responsibly.</p>
+      </article>
+      <article class="apology-card">
+        <div class="emoji">💗</div>
+        <h3>One honest heart</h3>
+        <p>It wants to listen, understand, and make things right.</p>
+      </article>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="showToast('Official teddy hug dispatched to Hrudya! 🧸💗')">Send teddy for negotiations 🧸</button>
+      <button class="btn btn-soft" onclick="showToast('The suspect promises to listen properly. Pinky promise. 🤞')">Pinky promise 🤞</button>
+    </div>
   </div>
 </section>
 
-<section class="pastel">
-  <div class="sticker">🌷🐻🌷</div>
-  <h2>One Last Thing, Hrudya…</h2>
-  <p>
-    You don't have to stop being upset just to make me happy.<br>
-    I want us to be okay because we understand each other. ❤️
-  </p>
-  <p style="margin-top:15px"><b>Can we talk when you're ready?</b> 🥺</p>
-  <div class="buttons">
-    <button class="pink" onclick="finalSurprise()">Sending You Love 💗</button>
-    <button class="white" onclick="hug()">One More Hug 🫂</button>
+<!-- SCENE 3: LETTER -->
+<section class="scene letter-scene" id="letter">
+  <span class="decor d1">💌</span>
+  <span class="decor d2">🌷</span>
+  <div class="wrap">
+    <div class="section-heading">
+      <div class="eyebrow">A letter from my heart</div>
+      <h2 class="script" style="font-size:clamp(42px,8vw,65px)">Just for you, Golu Molu 💗</h2>
+      <p class="sub">No big speeches. No excuses. Just a little note from me to you.</p>
+    </div>
+
+    <div class="envelope-area">
+      <div class="envelope" id="envelope" onclick="openLetter()" role="button" tabindex="0" aria-label="Open your love letter">
+        <div class="seal">💗</div>
+      </div>
+      <p class="envelope-label">✉ TAP THE ENVELOPE TO OPEN YOUR LETTER ✉</p>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="openLetter()">Open my letter 💌</button>
+      </div>
+    </div>
+
+    <article class="paper" id="paper">
+      <div class="stamp">💗 🌷</div>
+      <div class="letter-date">A LITTLE NOTE, WRITTEN WITH LOVE</div>
+      <h3>My dearest Hrudya,</h3>
+
+      <p>Meri pyaari si Hrudya, 🥹❤️</p>
+
+      <p>
+        Pata hai, main shayad har baar sahi words nahi bol pata,
+        aur kabhi-kabhi galti bhi kar deta hoon. But tumhari feelings
+        mere liye important hain. Agar meri kisi baat se tumhe hurt hua,
+        toh I'm genuinely sorry, meri jaan.
+      </p>
+
+      <p>
+        Main tumhe bas isliye nahi manana chahta ki tumhara gussa khatam
+        ho jaaye. Main chahta hoon ki tumhe lage ki tumhari baat suni jaati
+        hai, tumhe samjha jaata hai, aur tum mere liye kitni special ho.
+      </p>
+
+      <p>
+        Tumhari smile bahut pyaari hai, tumhara nakhra bhi thoda sa pyaara
+        hai 😭💕, aur tumhara khush rehna mere liye bahut matter karta hai.
+        Main perfect nahi hoon, but I want to keep learning how to love you
+        better.
+      </p>
+
+      <p>
+        Toh jab tumhara mann kare, mujhse baat kar lena, okay?
+        Main tumhari baat sununga. No rushing, no pressure.
+      </p>
+
+      <p class="signoff">Aur ab meri ek chhoti si request… 🥺</p>
+      <p class="signature">mann jaao naa mere golu molu se bacche</p>
+
+      <div class="ps">Ps. Love 😘</div>
+      <p style="text-align:right;margin-top:22px">— Tumhara Kaushik ❤️</p>
+      <div class="btn-row" style="margin-top:25px">
+        <button class="btn btn-primary" onclick="sendHug()">A hug for you 🫂</button>
+        <button class="btn btn-soft" onclick="goTo('mood')">One more surprise 🌷</button>
+      </div>
+    </article>
   </div>
-  <p id="finalMessage"></p>
 </section>
 
-<footer>
-  <div style="font-size:35px">💗 🧸 💗</div>
+<!-- SCENE 4: MOOD -->
+<section class="scene mood-scene" id="mood">
+  <span class="decor d1">🌸</span>
+  <span class="decor d4">💞</span>
+  <div class="wrap">
+    <div class="section-heading">
+      <div class="eyebrow">A tiny mood check</div>
+      <h2>How's my Golu Molu feeling? 🌷</h2>
+      <p class="sub">Choose whichever feels right. You don't have to pretend you're okay.</p>
+    </div>
+
+    <div class="mood-board">
+      <div class="mood-face" id="moodFace">🥺💗</div>
+      <div class="mood-options">
+        <button onclick="setMood('😤','Still a little upset — and that’s okay. I’m ready to listen. ❤️')">Still gussa 😤</button>
+        <button onclick="setMood('🥹','A little softer… sending you a gentle hug. 🫂')">Thoda maan gayi 🥹</button>
+        <button onclick="setMood('🫂','Big warm hug incoming. No words needed. 💗')">Need a hug 🫂</button>
+        <button onclick="setMood('🥰','There’s my favourite smile! Keep it for yourself, too. 🌷')">Ready to smile 🥰</button>
+      </div>
+      <p class="mood-result" id="moodResult" aria-live="polite">Your feelings are welcome here, Hrudya. 💗</p>
+    </div>
+  </div>
+</section>
+
+<!-- SCENE 5: ENDING -->
+<section class="scene final">
+  <span class="decor d1">🎀</span>
+  <span class="decor d2">✨</span>
+  <span class="decor d3">🌷</span>
+  <span class="decor d4">💗</span>
+
+  <div class="wrap">
+    <div class="big-heart">💖</div>
+    <div class="eyebrow">One last thing, my love</div>
+    <h2 class="display">You mean a lot to me, Hrudya.</h2>
+    <p class="sub">
+      You don't have to stop being upset just to make me happy.
+      I want us to understand each other and be okay, together.
+    </p>
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="celebrate()">Sending you all my love 💗</button>
+      <button class="btn btn-soft" onclick="goTo('letter')">Read my letter again 💌</button>
+    </div>
+    <p id="ending" class="sub" style="margin-top:22px;min-height:35px"></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div style="font-size:25px">🧸 💗 🌷</div>
   Made with love by Kaushik, especially for Hrudya.<br>
-  <span class="small">No pressure to forgive quickly. Just lots of love and a sincere wish to make things better. 🌷</span>
+  <span>One little website. One very special girl. Endless affection. 😘</span>
 </footer>
 
+<div id="toast" role="status" aria-live="polite"></div>
+
 <script>
+function goTo(id){
+  document.getElementById(id).scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function showToast(message){
+  const toast=document.getElementById("toast");
+  toast.textContent=message;
+  toast.classList.add("show");
+  clearTimeout(window.toastTimer);
+  window.toastTimer=setTimeout(()=>toast.classList.remove("show"),3000);
+}
+
 function openLetter(){
-  document.getElementById("letter").classList.add("show");
-  document.getElementById("letterBtn").textContent="Your letter is open 💗";
-  document.getElementById("letter").scrollIntoView({behavior:"smooth",block:"center"});
-}
-function hug(){
-  document.getElementById("response").textContent="🫂 Hug delivered! Hold it for as long as you need. 💗";
-  hearts(18);
-}
-function apology(){
-  document.getElementById("response").textContent="🥹 Apology request received! Kaushik wants to listen, understand, and do better. No pressure, Hrudya. ❤️";
-  hearts(30);
-}
-function evidence(){
-  document.getElementById("response").textContent="📂 Evidence: 1 teddy, 2 puppy eyes, 847 imaginary hugs, and one boy hoping to make you smile. 😂💗";
+  const envelope=document.getElementById("envelope");
+  const paper=document.getElementById("paper");
+  envelope.classList.add("open");
+  paper.classList.add("show");
+  setTimeout(()=>paper.scrollIntoView({behavior:"smooth",block:"center"}),150);
   hearts(12);
 }
-function mood(emoji,text){
-  document.getElementById("moodEmoji").textContent=emoji;
-  document.getElementById("moodText").textContent=text;
-  hearts(8);
-}
-function finalSurprise(){
-  document.getElementById("finalMessage").textContent="💌 Sending love to you, Hrudya. Take your time. Whenever you're ready, I'm here to listen. — Kaushik ❤️";
-  hearts(30);confetti();
-}
+
+document.getElementById("envelope").addEventListener("keydown",function(e){
+  if(e.key==="Enter"||e.key===" "){e.preventDefault();openLetter();}
+});
+
 function hearts(count){
-  const symbols=["💗","💕","💖","🌷","🧸","✨"];
+  const symbols=["💗","💕","💖","🌷","✨","🎀"];
   for(let i=0;i<count;i++){
     setTimeout(()=>{
-      const el=document.createElement("span");
-      el.className="floating";
-      el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
-      el.style.left=Math.random()*100+"vw";
-      el.style.fontSize=(20+Math.random()*22)+"px";
-      el.style.animationDuration=(3+Math.random()*3)+"s";
-      document.body.appendChild(el);
-      setTimeout(()=>el.remove(),6500);
-    },i*45);
+      const heart=document.createElement("span");
+      heart.className="heart-float";
+      heart.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+      heart.style.left=Math.random()*100+"vw";
+      heart.style.fontSize=(17+Math.random()*22)+"px";
+      heart.style.animationDuration=(3+Math.random()*2)+"s";
+      document.body.appendChild(heart);
+      setTimeout(()=>heart.remove(),5500);
+    },i*65);
   }
 }
-function confetti(){
-  const box=document.getElementById("confetti");
-  const symbols=["💗","🌸","✨","💕","🎀"];
-  for(let i=0;i<55;i++){
-    const el=document.createElement("span");
-    el.className="floating";
-    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
-    el.style.left=Math.random()*100+"vw";
-    el.style.fontSize=(14+Math.random()*17)+"px";
-    el.style.animationDuration=(2+Math.random()*2)+"s";
-    box.appendChild(el);
-    setTimeout(()=>el.remove(),4500);
-  }
+
+function sendHug(){
+  showToast("A very warm hug is on its way to you, Hrudya. 🧸🫂💗");
+  hearts(22);
 }
-setInterval(()=>{
+
+function setMood(emoji,message){
+  document.getElementById("moodFace").textContent=emoji;
+  document.getElementById("moodResult").textContent=message;
+  hearts(6);
+}
+
+function celebrate(){
+  document.getElementById("ending").textContent=
+    "mann jaao naa mere golu molu se bacche 🥺💗 Ps. Love 😘 — Kaushik";
+  hearts(45);
+  showToast("A little shower of love, especially for Hrudya! 💖");
+}
+
+let heartTimer=setInterval(()=>{
   if(document.hidden)return;
-  const el=document.createElement("span");
-  el.className="floating";
-  el.textContent=["💗","💕","✨"][Math.floor(Math.random()*3)];
-  el.style.left=Math.random()*100+"vw";
-  el.style.fontSize="20px";
-  el.style.animationDuration="6s";
-  document.body.appendChild(el);
-  setTimeout(()=>el.remove(),6500);
-},1800);
+  const heart=document.createElement("span");
+  heart.className="heart-float";
+  heart.textContent=["♡","💗","💕","✨"][Math.floor(Math.random()*4)];
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.fontSize=(15+Math.random()*13)+"px";
+  heart.style.animationDuration=(5+Math.random()*3)+"s";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),8500);
+},1700);
+
+window.addEventListener("pagehide",()=>clearInterval(heartTimer));
 </script>
 </body>
 </html>
