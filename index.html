@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffe8f0">
+<title>For My Hrudya 💗</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Trebuchet MS",Arial,sans-serif;
+  color:#714057;background:#fff5f8;overflow-x:hidden;
+  text-align:center
+}
+button{
+  border:0;border-radius:30px;padding:13px 21px;
+  font:inherit;font-weight:bold;cursor:pointer;
+  transition:transform .2s,background .2s
+}
+button:hover{transform:translateY(-3px)}
+.pink{background:#f45c91;color:white;box-shadow:0 6px 15px #f45c9133}
+.white{background:white;color:#d9437b;border:2px solid #ffc4d7}
+.hero{
+  min-height:100vh;padding:35px 16px;display:grid;place-items:center;
+  background:radial-gradient(circle at 15% 20%,#ffdce9,transparent 35%),
+  radial-gradient(circle at 90% 75%,#ffdfeb,transparent 35%),#fff5f8
+}
+.card{
+  width:min(720px,100%);padding:32px 22px;border-radius:32px;
+  background:#ffffffdf;border:2px solid white;
+  box-shadow:0 20px 60px #d65b861c
+}
+.sticker{font-size:76px;animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-9px) rotate(4deg)}}
+h1{font: bold clamp(40px,9vw,68px) Georgia,serif;color:#e44d83;margin:14px 0}
+h2{font-size:clamp(25px,6vw,36px);color:#df4d80;margin:12px 0 18px}
+p{font-size:16px;line-height:1.85}
+.pill{display:inline-block;background:#ffe1ec;border-radius:30px;padding:9px 15px;margin:12px 0;font-size:13px}
+.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:22px}
+section{padding:60px 16px;position:relative}
+.paper,.gamebox{
+  width:min(680px,100%);margin:22px auto;padding:27px 21px;
+  background:white;border:2px dashed #ffb1ca;border-radius:25px;
+  box-shadow:0 12px 35px #dc729511
+}
+.letter{display:none;text-align:left;white-space:pre-line;line-height:1.95;margin-top:22px}
+.letter.show{display:block;animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.reasons{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;max-width:700px;margin:25px auto}
+.reason{background:white;border:2px solid #ffe0eb;border-radius:20px;padding:20px 10px}
+.reason div{font-size:38px;margin-bottom:9px}
+.reason p{font-size:14px;line-height:1.6;margin-top:6px}
+#response,#moodText,#finalMessage{min-height:30px;margin:18px auto 0;font-weight:bold;color:#d9437b;line-height:1.8}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:10;overflow:hidden}
+.floating{position:fixed;bottom:-50px;pointer-events:none;z-index:8;animation:rise linear forwards}
+@keyframes rise{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+.pastel{background:#ffedf3}
+.bigemoji{font-size:65px;margin:15px}
+footer{background:#ffe2ec;padding:30px 15px;line-height:2}
+.small{font-size:12px;color:#95677b}
+@media(max-width:450px){
+ .card{padding:28px 16px}
+ .reasons{grid-template-columns:1fr 1fr}
+ .buttons button{width:100%;max-width:300px}
+ section{padding:48px 14px}
+}
+</style>
+</head>
+
+<body>
+<div id="confetti"></div>
+
+<header class="hero">
+  <div class="card">
+    <div class="sticker">🧸💗🐻</div>
+    <div class="pill">A very important message for Hrudya 💌</div>
+    <h1>Hey, Hrudya! 🥺</h1>
+    <h2>Gussa ho kya mujhse? 👉👈</h2>
+    <p>
+      Achha baba, suno na… 🥹<br>
+      Meri pyaari si Hrudya ko smile karte hue dekhna hai.
+      Tumhari smile ke saamne toh meri arguments ki battery low ho jaati hai. 🔋😂
+    </p>
+    <div class="sticker">🥺👉👈</div>
+    <p><b>Thoda sa pyaar, thodi si maafi… aur ek chhoti si smile milegi?</b> 💗</p>
+    <div class="buttons">
+      <button class="pink" onclick="openLetter()">Read My Little Letter 💌</button>
+      <button class="white" onclick="hug()">Virtual Hug 🫂</button>
+    </div>
+    <p class="small" style="margin-top:20px">Made by someone who misses your smile. 🙈</p>
+  </div>
+</header>
+
+<section>
+  <h2>Official Apology Department 🥹</h2>
+  <p>Madam Hrudya, please review the following very serious documents.</p>
+  <div class="reasons">
+    <article class="reason"><div>🐻</div><b>Exhibit A</b><p>One extremely sorry teddy bear.</p></article>
+    <article class="reason"><div>🐱</div><b>Exhibit B</b><p>One cat requesting peace negotiations.</p></article>
+    <article class="reason"><div>🍫</div><b>Exhibit C</b><p>Chocolate-level affection and virtual hugs.</p></article>
+    <article class="reason"><div>💗</div><b>Exhibit D</b><p>A heart that genuinely wants you happy.</p></article>
+  </div>
+  <div class="buttons">
+    <button class="pink" onclick="apology()">Accept My Apology? 🥺</button>
+    <button class="white" onclick="evidence()">Need More Evidence 😂</button>
+  </div>
+  <p id="response" aria-live="polite"></p>
+</section>
+
+<section class="pastel">
+  <h2>A Tiny Love Letter 💌</h2>
+  <p>Written with love, a little nervousness, and 1000 imaginary hugs.</p>
+  <div class="paper">
+    <div class="sticker">💌🌷</div>
+    <button class="pink" id="letterBtn" onclick="openLetter()">Open Your Letter 💗</button>
+    <div class="letter" id="letter">Hrudya, meri pyaari si jaan ❤️
+
+Mujhe nahi pata ki tum abhi kitna gussa ho, but I do know that your feelings matter to me.
+
+Agar meri kisi baat ya action se tumhe hurt hua hai, toh I'm genuinely sorry. Main tumhari feelings ko lightly nahi lena chahta. I want to understand what upset you and do better.
+
+Tum mere liye special ho — sirf tab nahi jab tum happy ho, but also when you're upset, tired, or need some space.
+
+Main tumhe force nahi karunga ki tum turant maan jao. Bas jab tum ready ho, I want to listen, understand, and make things right.
+
+Aur haan… tumhari smile ki bahut yaad aati hai. 🥹💗
+
+Ek virtual teddy hug tumhare liye:
+🧸🤗💐
+
+With lots of love,
+Tumhara Kaushik ❤️</div>
+  </div>
+</section>
+
+<section>
+  <h2>Choose Your Current Mood, Madam 😭</h2>
+  <p>There are no wrong answers. (Please don't choose the last one. 🥲)</p>
+  <div class="gamebox">
+    <div class="bigemoji" id="moodEmoji">🤨</div>
+    <div class="buttons">
+      <button class="white" onclick="mood('😤','Thoda sa gussa abhi bhi hai!')">Still angry 😤</button>
+      <button class="white" onclick="mood('🥹💗','Thoda sa pighal rahi hoon…')">A little softer 🥹</button>
+      <button class="pink" onclick="mood('🥰🫂','Sending you the biggest virtual hug!')">Okay, hug me 🤗</button>
+    </div>
+    <p id="moodText"></p>
+  </div>
+</section>
+
+<section class="pastel">
+  <div class="sticker">🌷🐻🌷</div>
+  <h2>One Last Thing, Hrudya…</h2>
+  <p>
+    You don't have to stop being upset just to make me happy.<br>
+    I want us to be okay because we understand each other. ❤️
+  </p>
+  <p style="margin-top:15px"><b>Can we talk when you're ready?</b> 🥺</p>
+  <div class="buttons">
+    <button class="pink" onclick="finalSurprise()">Sending You Love 💗</button>
+    <button class="white" onclick="hug()">One More Hug 🫂</button>
+  </div>
+  <p id="finalMessage"></p>
+</section>
+
+<footer>
+  <div style="font-size:35px">💗 🧸 💗</div>
+  Made with love by Kaushik, especially for Hrudya.<br>
+  <span class="small">No pressure to forgive quickly. Just lots of love and a sincere wish to make things better. 🌷</span>
+</footer>
+
+<script>
+function openLetter(){
+  document.getElementById("letter").classList.add("show");
+  document.getElementById("letterBtn").textContent="Your letter is open 💗";
+  document.getElementById("letter").scrollIntoView({behavior:"smooth",block:"center"});
+}
+function hug(){
+  document.getElementById("response").textContent="🫂 Hug delivered! Hold it for as long as you need. 💗";
+  hearts(18);
+}
+function apology(){
+  document.getElementById("response").textContent="🥹 Apology request received! Kaushik wants to listen, understand, and do better. No pressure, Hrudya. ❤️";
+  hearts(30);
+}
+function evidence(){
+  document.getElementById("response").textContent="📂 Evidence: 1 teddy, 2 puppy eyes, 847 imaginary hugs, and one boy hoping to make you smile. 😂💗";
+  hearts(12);
+}
+function mood(emoji,text){
+  document.getElementById("moodEmoji").textContent=emoji;
+  document.getElementById("moodText").textContent=text;
+  hearts(8);
+}
+function finalSurprise(){
+  document.getElementById("finalMessage").textContent="💌 Sending love to you, Hrudya. Take your time. Whenever you're ready, I'm here to listen. — Kaushik ❤️";
+  hearts(30);confetti();
+}
+function hearts(count){
+  const symbols=["💗","💕","💖","🌷","🧸","✨"];
+  for(let i=0;i<count;i++){
+    setTimeout(()=>{
+      const el=document.createElement("span");
+      el.className="floating";
+      el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+      el.style.left=Math.random()*100+"vw";
+      el.style.fontSize=(20+Math.random()*22)+"px";
+      el.style.animationDuration=(3+Math.random()*3)+"s";
+      document.body.appendChild(el);
+      setTimeout(()=>el.remove(),6500);
+    },i*45);
+  }
+}
+function confetti(){
+  const box=document.getElementById("confetti");
+  const symbols=["💗","🌸","✨","💕","🎀"];
+  for(let i=0;i<55;i++){
+    const el=document.createElement("span");
+    el.className="floating";
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left=Math.random()*100+"vw";
+    el.style.fontSize=(14+Math.random()*17)+"px";
+    el.style.animationDuration=(2+Math.random()*2)+"s";
+    box.appendChild(el);
+    setTimeout(()=>el.remove(),4500);
+  }
+}
+setInterval(()=>{
+  if(document.hidden)return;
+  const el=document.createElement("span");
+  el.className="floating";
+  el.textContent=["💗","💕","✨"][Math.floor(Math.random()*3)];
+  el.style.left=Math.random()*100+"vw";
+  el.style.fontSize="20px";
+  el.style.animationDuration="6s";
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),6500);
+},1800);
+</script>
+</body>
+</html>
