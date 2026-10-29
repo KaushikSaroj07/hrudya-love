@@ -4,421 +4,557 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#fff0f5">
-<title>For My Golu Molu 💗</title>
+<meta name="theme-color" content="#fff5f7">
+<title>A Little Note for Hrudya ♡</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --pink:#f16b98;
-  --deep:#bd3e70;
-  --pale:#fff0f5;
-  --ink:#573548;
-  --cream:#fffaf1;
+  --rose:#d75e83;
+  --dark-rose:#9f3c60;
+  --text:#573b49;
+  --muted:#a17b8a;
+  --paper:#fffdf8;
+  --blush:#fff1f5;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  margin:0;background:var(--pale);color:var(--ink);
-  font-family:"DM Sans",sans-serif;overflow-x:hidden;
+  margin:0;
+  font-family:"DM Sans",sans-serif;
+  color:var(--text);
+  background:#fff8f9;
+  overflow-x:hidden;
 }
-button{font:inherit;cursor:pointer;border:0}
-button:focus-visible,a:focus-visible{outline:3px solid #a53c70;outline-offset:4px}
-button:active{transform:scale(.96)}
-a{color:inherit}
-.scene{
-  min-height:90vh;display:flex;align-items:center;justify-content:center;
-  padding:85px 20px;position:relative;overflow:hidden;
-}
-.wrap{width:min(850px,100%);position:relative;z-index:2}
-.eyebrow{
-  text-transform:uppercase;letter-spacing:3px;font-size:11px;
-  font-weight:700;color:var(--deep)
-}
-.script{font-family:"Dancing Script",cursive}
-.display{
-  font-family:"Playfair Display",serif;
-  font-size:clamp(40px,8vw,76px);line-height:1.08;
-  letter-spacing:-1.5px;margin:18px 0;color:#8f345c
-}
-.sub{font-size:16px;line-height:1.9;max-width:520px;margin:0 auto}
-.btn{
-  padding:14px 23px;border-radius:40px;font-weight:700;
-  transition:transform .2s,box-shadow .2s;background:white;color:var(--deep);
-  box-shadow:0 5px 18px #b84c7415
-}
-.btn:hover{transform:translateY(-3px);box-shadow:0 9px 22px #b84c7428}
-.btn-primary{background:linear-gradient(135deg,#f783a8,#e64d83);color:white}
-.btn-soft{background:#fff;color:#b83f70;border:1px solid #f8c2d4}
-.btn-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}
-.tag{
-  display:inline-flex;align-items:center;gap:7px;padding:9px 15px;
-  border-radius:50px;background:#fff9;border:1px solid #fff;
-  font-size:12px;font-weight:700
-}
+button{font:inherit;cursor:pointer}
+button:focus-visible{outline:3px solid #a83e68;outline-offset:4px}
+button:active{transform:scale(.97)}
+a{color:inherit;text-decoration:none}
 
-/* floating decoration */
-.decor{position:absolute;pointer-events:none;user-select:none;z-index:1}
-.d1{left:7%;top:18%;font-size:35px;animation:sway 4s ease-in-out infinite}
-.d2{right:8%;top:22%;font-size:27px;animation:sway 3.5s ease-in-out infinite reverse}
-.d3{left:12%;bottom:15%;font-size:24px;animation:sway 5s ease-in-out infinite}
-.d4{right:10%;bottom:18%;font-size:39px;animation:sway 4.5s ease-in-out infinite}
-@keyframes sway{50%{transform:translateY(-13px) rotate(9deg)}}
-@keyframes rise{to{transform:translateY(-110vh) rotate(40deg);opacity:0}}
-@keyframes pop{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
-
-/* welcome */
-.hero{
-  min-height:100svh;text-align:center;
+/* Elegant background */
+.background{
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
   background:
-    radial-gradient(ellipse at 15% 25%,#ffd3e3 0,transparent 34%),
-    radial-gradient(ellipse at 85% 80%,#fbd7e4 0,transparent 35%),
-    linear-gradient(140deg,#fff8f8,#fff0f5);
+    radial-gradient(ellipse at 8% 12%,#f9dbe5 0,transparent 34%),
+    radial-gradient(ellipse at 95% 80%,#f4dce5 0,transparent 35%),
+    linear-gradient(145deg,#fffafa,#fff2f6 55%,#fff9f5);
 }
-.hero .wrap{padding:35px 0}
-.hero-sticker{font-size:clamp(65px,15vw,112px);margin:15px 0 22px;line-height:1.3}
-.hero h1 em{font-family:"Dancing Script",cursive;color:#e74e85;font-style:normal}
-.hero .display{max-width:750px;margin:20px auto}
-.hero .sub{max-width:480px}
-.scroll-hint{margin-top:42px;font-size:12px;letter-spacing:1px;opacity:.7}
-.down{display:block;font-size:24px;margin-top:6px;animation:sway 2s infinite}
+.grain{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:5;
+  opacity:.12;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.13'/%3E%3C/svg%3E");
+}
 
-/* apology */
-.apology{background:#fffaf4;text-align:center}
-.section-heading{text-align:center;margin-bottom:35px}
-.section-heading h2{
-  font:600 clamp(34px,6vw,52px) "Playfair Display",serif;
-  margin:12px 0;color:#8f345c
+.topbar{
+  position:absolute;
+  top:0;left:0;width:100%;
+  padding:23px clamp(20px,6vw,80px);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  z-index:3;
 }
-.apology-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.apology-card{
-  padding:27px 16px 25px;background:white;border:1px solid #f4e0e6;
-  border-radius:24px;box-shadow:0 12px 35px #8b39530a;
-  transition:transform .25s
+.brand{
+  display:flex;align-items:center;gap:10px;
+  font-size:13px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;
 }
-.apology-card:hover{transform:translateY(-6px) rotate(-1deg)}
-.apology-card .emoji{font-size:47px;margin-bottom:15px}
-.apology-card h3{font-size:16px;margin:0 0 8px}
-.apology-card p{font-size:13px;line-height:1.8;margin:0;color:#866b78}
+.brand-icon{color:var(--rose);font-size:23px}
+.top-caption{
+  font-size:11px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--muted);
+}
 
-/* letter */
-.letter-scene{
-  background:linear-gradient(145deg,#ffe5ee,#fff1f5 60%,#fbe5ef);
-  text-align:center
+/* Main cover */
+.hero{
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:120px 20px 70px;
+  position:relative;
+  text-align:center;
 }
-.envelope-area{margin:35px auto 10px;max-width:440px}
+.hero-inner{width:min(850px,100%);position:relative;z-index:2}
+.kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:9px 15px;
+  border:1px solid #f2d7e0;
+  border-radius:100px;
+  color:#a65a77;
+  background:#ffffffa6;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.hero-art{
+  font-size:clamp(62px,10vw,94px);
+  margin:26px 0 16px;
+  line-height:1.3;
+  filter:drop-shadow(0 12px 14px #a34a7018);
+  animation:floaty 4s ease-in-out infinite;
+}
+h1{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(55px,11vw,105px);
+  font-weight:500;
+  letter-spacing:-2px;
+  line-height:.98;
+  color:#783a55;
+  margin:10px 0 20px;
+}
+h1 em{font-family:"Dancing Script",cursive;color:var(--rose);font-weight:600}
+.hero-line{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(19px,3vw,25px);
+  color:#92677b;
+  font-style:italic;
+}
+.hero-actions{
+  display:flex;justify-content:center;gap:13px;flex-wrap:wrap;
+  margin-top:32px;
+}
+.btn{
+  border-radius:50px;
+  padding:14px 23px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.3px;
+  transition:transform .25s,box-shadow .25s,background .25s;
+}
+.btn-primary{
+  background:linear-gradient(135deg,#e987a4,#ce527d);
+  color:white;
+  box-shadow:0 8px 23px #c44e792b;
+}
+.btn-secondary{
+  background:#ffffffad;color:#9e4969;
+  border:1px solid #ebc7d4;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 25px #b34b7224}
+.hint{
+  font-size:10px;letter-spacing:2px;color:#b18c9b;
+  text-transform:uppercase;margin-top:48px;
+}
+.hint span{display:block;font-size:20px;margin-top:8px;animation:down 1.5s infinite}
+
+/* Floating decorative stickers */
+.sticker{
+  position:absolute;
+  z-index:1;
+  user-select:none;
+  pointer-events:none;
+}
+.sticker-bear{left:7%;top:25%;font-size:clamp(30px,5vw,54px);animation:floaty 4s infinite}
+.sticker-bow{right:9%;top:23%;font-size:38px;animation:tilt 4s infinite}
+.sticker-flower{left:12%;bottom:17%;font-size:30px;animation:tilt 5s infinite reverse}
+.sticker-sparkle{right:12%;bottom:20%;font-size:32px;animation:floaty 3.5s infinite}
+
+/* Letter section */
+.letter-section{
+  min-height:100vh;
+  padding:100px 18px;
+  background:linear-gradient(155deg,#fff8f8,#fceaf1 60%,#fff6f7);
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  position:relative;
+}
+.letter-inner{width:min(760px,100%)}
+.section-overline{
+  font-size:10px;letter-spacing:3px;text-transform:uppercase;
+  color:#b1748c;font-weight:700;
+}
+.section-title{
+  font-family:"Cormorant Garamond",serif;
+  font-weight:500;
+  font-size:clamp(39px,7vw,63px);
+  line-height:1.1;
+  color:#783a55;
+  margin:17px 0 12px;
+}
+.section-desc{font-size:13px;color:#a17b8a;line-height:1.8}
+
+/* Interactive envelope */
+.envelope-wrap{
+  margin:45px auto 0;
+  width:min(330px,85vw);
+  perspective:1000px;
+}
 .envelope{
-  width:min(320px,85vw);height:205px;margin:auto;position:relative;
-  background:#f4a3bd;border-radius:8px 8px 15px 15px;
-  box-shadow:0 18px 45px #a94d701e;cursor:pointer;
-  transition:transform .3s
+  position:relative;
+  height:205px;
+  width:100%;
+  border-radius:4px 4px 13px 13px;
+  background:#e9a0b8;
+  box-shadow:0 22px 50px #a7476d24;
+  cursor:pointer;
+  outline:none;
+  transition:transform .3s;
 }
 .envelope:hover{transform:translateY(-4px)}
-.envelope:before{
-  content:"";position:absolute;inset:0;
-  background:#ffd6e3;clip-path:polygon(0 0,50% 60%,100% 0);
-  z-index:2;transition:transform .6s;transform-origin:top
+.envelope-base{
+  position:absolute;inset:0;
+  background:#f4bacd;
+  clip-path:polygon(0 0,50% 58%,100% 0);
+  transform-origin:top;
+  transition:transform .75s ease;
+  z-index:3;
 }
-.envelope:after{
-  content:"";position:absolute;inset:0;
-  background:#f8b7cb;clip-path:polygon(0 100%,50% 45%,100% 100%);
-  z-index:3
+.envelope-front{
+  position:absolute;inset:0;
+  clip-path:polygon(0 100%,0 0,50% 53%,100% 0,100% 100%);
+  background:#f8cbd9;
+  z-index:2;
 }
-.envelope.open:before{transform:rotateX(180deg);z-index:0}
-.envelope .seal{
-  position:absolute;left:50%;top:43%;transform:translate(-50%,-50%);
-  font-size:38px;z-index:4;transition:.3s
+.envelope-seal{
+  position:absolute;left:50%;top:53%;
+  transform:translate(-50%,-50%);
+  font-size:40px;z-index:4;
+  transition:.3s;
 }
-.envelope.open .seal{opacity:0}
-.envelope-label{margin-top:18px;font-size:13px;color:#a14e70}
+.envelope-word{
+  position:absolute;bottom:13px;left:0;width:100%;
+  font-family:"Dancing Script",cursive;
+  color:#a95072;font-size:23px;z-index:4;
+}
+.envelope.open .envelope-base{transform:rotateX(180deg);z-index:0}
+.envelope.open .envelope-seal{opacity:0;transform:translate(-50%,-50%) scale(.4)}
+.tap-hint{font-size:10px;letter-spacing:2px;color:#aa8292;margin-top:20px}
 
-/* real letter paper */
-.paper{
-  max-width:660px;margin:38px auto 0;background:#fffdf7;
-  padding:clamp(24px,6vw,55px);text-align:left;position:relative;
-  border-radius:3px;box-shadow:0 18px 50px #a45a751e;
-  border-top:6px solid #ed9ab7;
-  background-image:repeating-linear-gradient(
-    transparent,transparent 34px,#f4e9df 35px
-  );
-  display:none;animation:pop .5s ease
+/* Note — ONLY the user's requested text */
+.note{
+  display:none;
+  text-align:center;
+  position:relative;
+  max-width:570px;
+  width:100%;
+  margin:45px auto 0;
+  padding:clamp(35px,7vw,60px) clamp(20px,6vw,48px);
+  background:
+    linear-gradient(90deg,#fffdf8 0%,#fffefa 100%);
+  border:1px solid #f1e2d8;
+  border-top:5px solid #d77b9b;
+  box-shadow:0 24px 60px #80425815;
+  animation:noteOpen .8s cubic-bezier(.2,.8,.2,1) both;
 }
-.paper.show{display:block}
-.paper .stamp{font-size:35px;text-align:right}
-.paper .letter-date{font-size:11px;letter-spacing:1px;color:#a67b8b}
-.paper h3{font:700 clamp(30px,6vw,42px) "Dancing Script",cursive;color:#b33c6d;margin:17px 0}
-.paper p{
-  font:500 17px/2 "Dancing Script",cursive;color:#674454;
-  margin:0 0 14px
+.note.show{display:block}
+.note:before,.note:after{
+  content:"";position:absolute;top:12px;width:7px;height:7px;
+  border-radius:50%;background:#e8afc1;
 }
-.paper .signoff{font-size:22px;margin-top:25px}
-.paper .signature{font-size:34px;font-weight:700;color:#bd3e70}
-.paper .ps{
-  margin-top:23px;padding:12px 15px;border-left:3px solid #ee84a9;
-  background:#fff0f5;font-size:22px
+.note:before{left:12px}.note:after{right:12px}
+.note-flower{font-size:29px;margin-bottom:20px}
+.note-main{
+  font-family:"Dancing Script",cursive;
+  font-size:clamp(30px,6vw,43px);
+  line-height:1.55;
+  color:#8d385b;
+}
+.note-ps{
+  font-family:"Dancing Script",cursive;
+  font-size:29px;
+  color:#d45b85;
+  margin-top:20px;
+}
+.note-heart{font-size:25px;margin-top:22px}
+.note-actions{margin-top:25px}
+@keyframes noteOpen{
+  from{opacity:0;transform:translateY(22px) scale(.97)}
+  to{opacity:1;transform:translateY(0) scale(1)}
 }
 
-/* little interactive mood */
-.mood-scene{background:#fffaf4;text-align:center}
-.mood-board{
-  max-width:600px;margin:auto;padding:30px 20px;border-radius:30px;
-  background:white;border:1px solid #f1dfe6;
-  box-shadow:0 15px 45px #a34e7010
+/* Ending */
+.ending{
+  min-height:80vh;
+  display:flex;align-items:center;justify-content:center;
+  padding:90px 20px;
+  text-align:center;
+  background:radial-gradient(ellipse at center,#ffdfeb,#fff7f7 65%);
 }
-.mood-face{font-size:72px;margin:10px 0}
-.mood-result{min-height:65px;font-size:15px;line-height:1.8;margin-top:20px}
-.mood-options{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:18px}
-.mood-options button{background:#fff1f6;border:1px solid #f7d4e1;color:#91415f;padding:12px 15px;border-radius:25px}
+.ending-inner{max-width:700px}
+.heart-big{font-size:75px;animation:heartbeat 1.7s infinite}
+.ending h2{
+  font-family:"Cormorant Garamond",serif;
+  font-weight:500;color:#783a55;
+  font-size:clamp(39px,7vw,67px);
+  margin:18px 0;
+}
+.ending p{color:#a17b8a;font-size:13px;line-height:1.9}
+.footer{
+  text-align:center;padding:25px 15px;background:#fffafa;
+  color:#ae8a99;font-size:10px;letter-spacing:1px;
+  border-top:1px solid #f4e4eb;
+}
 
-/* surprise */
-.final{
-  text-align:center;min-height:85vh;
-  background:radial-gradient(ellipse at 50% 40%,#ffd6e5,transparent 52%),#fff0f5
-}
-.final .wrap{max-width:700px}
-.final .big-heart{font-size:85px;animation:heartbeat 1.5s infinite}
-@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.13)}30%{transform:scale(1)}45%{transform:scale(1.08)}}
-.final .display{font-size:clamp(37px,7vw,61px)}
-.footer{padding:27px 15px;text-align:center;background:#fffaf4;font-size:12px;color:#987486;line-height:2}
+/* Toast and hearts */
 #toast{
-  position:fixed;bottom:22px;left:50%;transform:translate(-50%,25px);
-  width:max-content;max-width:90%;padding:13px 19px;border-radius:30px;
-  background:#71384f;color:white;font-size:13px;opacity:0;
-  pointer-events:none;z-index:20;transition:.3s;box-shadow:0 7px 25px #6a344b33
+  position:fixed;left:50%;bottom:25px;z-index:20;
+  transform:translate(-50%,20px);opacity:0;pointer-events:none;
+  max-width:90%;width:max-content;
+  background:#713b54;color:white;padding:13px 20px;
+  border-radius:50px;font-size:12px;line-height:1.5;
+  box-shadow:0 9px 25px #68344b30;transition:.3s;
 }
 #toast.show{opacity:1;transform:translate(-50%,0)}
-.heart-float{position:fixed;bottom:-35px;z-index:15;pointer-events:none;animation:rise 4s linear forwards}
+.heart-float{
+  position:fixed;bottom:-35px;z-index:15;pointer-events:none;
+  animation:rise linear forwards;
+}
+@keyframes rise{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+@keyframes floaty{50%{transform:translateY(-10px)}}
+@keyframes tilt{50%{transform:rotate(12deg) translateY(-5px)}}
+@keyframes down{50%{transform:translateY(5px)}}
+@keyframes heartbeat{
+  0%,100%{transform:scale(1)}
+  15%{transform:scale(1.12)}
+  30%{transform:scale(1)}
+  45%{transform:scale(1.08)}
+}
+
 @media(max-width:650px){
- .scene{min-height:auto;padding:75px 18px}
- .hero{min-height:100svh}
- .apology-grid{grid-template-columns:1fr}
- .apology-card{display:grid;grid-template-columns:58px 1fr;text-align:left;align-items:center;column-gap:12px;padding:17px}
- .apology-card .emoji{grid-row:span 2;font-size:38px;margin:0;text-align:center}
- .apology-card h3{align-self:end}
- .apology-card p{align-self:start}
- .d1{left:4%;top:8%}.d2{right:4%;top:12%}
- .paper p{font-size:17px}
+  .topbar{padding:18px 20px}
+  .top-caption{font-size:9px;letter-spacing:1px}
+  .hero{min-height:100svh;padding-top:110px}
+  .sticker-bear{left:3%;top:16%}
+  .sticker-bow{right:3%;top:18%;font-size:28px}
+  .sticker-flower{left:5%;bottom:9%}
+  .sticker-sparkle{right:5%;bottom:10%}
+  .letter-section{padding:80px 17px}
+  .envelope{height:185px}
+  .ending{min-height:70vh}
 }
 @media(prefers-reduced-motion:reduce){
- *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}
+  *,*:before,*:after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition:none!important;
+  }
 }
 </style>
 </head>
 
 <body>
+<div class="background"></div>
+<div class="grain"></div>
 
-<!-- SCENE 1: WELCOME -->
-<section class="scene hero">
-  <span class="decor d1">🎀</span>
-  <span class="decor d2">✨</span>
-  <span class="decor d3">🌷</span>
-  <span class="decor d4">💌</span>
+<header class="topbar">
+  <a class="brand" href="#home">
+    <span class="brand-icon">♡</span>
+    <span>Little Things, Big Love</span>
+  </a>
+  <span class="top-caption">Made just for you · H</span>
+</header>
 
-  <div class="wrap">
-    <span class="tag">♡ A tiny website, a big feeling ♡</span>
-    <div class="hero-sticker">🐻‍❄️💗🧸</div>
-    <div class="eyebrow">For one very special person</div>
-    <h1 class="display">Hey, my <em>Hrudya</em>…</h1>
-    <p class="sub">
-      I think someone is a little upset with me. 🥺<br>
-      And someone else has been thinking about how to make her smile.
-    </p>
-    <div class="btn-row">
-      <button class="btn btn-primary" onclick="goTo('letter')">I have something for you 💌</button>
-      <button class="btn btn-soft" onclick="sendHug()">Need a hug first? 🫂</button>
+<!-- WELCOME -->
+<section class="scene hero" id="home">
+  <span class="sticker sticker-bear">🧸</span>
+  <span class="sticker sticker-bow">🎀</span>
+  <span class="sticker sticker-flower">🌷</span>
+  <span class="sticker sticker-sparkle">✦</span>
+
+  <div class="hero-inner">
+    <span class="kicker">♡ A little corner of the internet ♡</span>
+
+    <div class="hero-art">🐻‍❄️ 💗 🧸</div>
+
+    <div class="eyebrow">A little something for</div>
+    <h1>My <em>Hrudya</em></h1>
+    <p class="hero-line">For the girl with my favourite smile.</p>
+
+    <div class="hero-actions">
+      <button class="btn btn-primary" onclick="goTo('letter')">
+        A little note for you ✉
+      </button>
+      <button class="btn btn-secondary" onclick="sendHug()">
+        Send a hug ♡
+      </button>
     </div>
-    <div class="scroll-hint">MADE WITH LOVE, JUST FOR YOU<span class="down">↓</span></div>
+
+    <div class="hint">There's something waiting for you<span>⌄</span></div>
   </div>
 </section>
 
-<!-- SCENE 2: APOLOGY -->
+<!-- APOLOGY SCENE -->
 <section class="scene apology">
-  <span class="decor d1">💕</span>
-  <span class="decor d4">🌸</span>
   <div class="wrap">
     <div class="section-heading">
-      <div class="eyebrow">A very serious little investigation</div>
-      <h2>The Case of the<br>Upset Golu Molu 🕵️‍♂️</h2>
-      <p class="sub">The suspect has been identified. It's me. 😭</p>
+      <div class="section-overline">A little softness goes a long way</div>
+      <h2 class="section-title">Just a little love, wrapped in pink.</h2>
     </div>
 
     <div class="apology-grid">
       <article class="apology-card">
-        <div class="emoji">🐻</div>
-        <h3>One sorry teddy</h3>
-        <p>He has travelled a very long way to deliver one hug.</p>
+        <div class="emoji">🧸</div>
+        <h3>A teddy-sized hug</h3>
+        <p>For whenever you need one.</p>
       </article>
+
       <article class="apology-card">
-        <div class="emoji">🥺</div>
-        <h3>Two puppy eyes</h3>
-        <p>They have been activated. Please use responsibly.</p>
+        <div class="emoji">🎀</div>
+        <h3>A little sweetness</h3>
+        <p>Because you deserve gentle things.</p>
       </article>
+
       <article class="apology-card">
-        <div class="emoji">💗</div>
-        <h3>One honest heart</h3>
-        <p>It wants to listen, understand, and make things right.</p>
+        <div class="emoji">💌</div>
+        <h3>A note from me</h3>
+        <p>Waiting inside its tiny envelope.</p>
       </article>
     </div>
 
     <div class="btn-row">
-      <button class="btn btn-primary" onclick="showToast('Official teddy hug dispatched to Hrudya! 🧸💗')">Send teddy for negotiations 🧸</button>
-      <button class="btn btn-soft" onclick="showToast('The suspect promises to listen properly. Pinky promise. 🤞')">Pinky promise 🤞</button>
+      <button class="btn btn-primary" onclick="goTo('letter')">
+        Find your letter 💗
+      </button>
     </div>
   </div>
 </section>
 
-<!-- SCENE 3: LETTER -->
+<!-- ENVELOPE AND LETTER -->
 <section class="scene letter-scene" id="letter">
-  <span class="decor d1">💌</span>
-  <span class="decor d2">🌷</span>
-  <div class="wrap">
-    <div class="section-heading">
-      <div class="eyebrow">A letter from my heart</div>
-      <h2 class="script" style="font-size:clamp(42px,8vw,65px)">Just for you, Golu Molu 💗</h2>
-      <p class="sub">No big speeches. No excuses. Just a little note from me to you.</p>
+  <div class="letter-inner">
+    <div class="section-overline">Sealed with a little love</div>
+    <h2 class="section-title">A letter for my Golu Molu</h2>
+    <p class="section-desc">Tap the envelope to reveal your little note.</p>
+
+    <div class="envelope-wrap">
+      <div
+        class="envelope"
+        id="envelope"
+        role="button"
+        tabindex="0"
+        aria-label="Open the letter"
+        onclick="openLetter()"
+      >
+        <div class="envelope-base"></div>
+        <div class="envelope-front"></div>
+        <div class="envelope-seal">💗</div>
+        <div class="envelope-word">For my favourite person</div>
+      </div>
+      <div class="tap-hint">✦ TAP TO OPEN ✦</div>
     </div>
 
-    <div class="envelope-area">
-      <div class="envelope" id="envelope" onclick="openLetter()" role="button" tabindex="0" aria-label="Open your love letter">
-        <div class="seal">💗</div>
+    <article class="note" id="note">
+      <div class="note-flower">🌷</div>
+
+      <div class="note-main">
+        mann jaao naa mere golu molu se bacche
       </div>
-      <p class="envelope-label">✉ TAP THE ENVELOPE TO OPEN YOUR LETTER ✉</p>
-      <div class="btn-row">
-        <button class="btn btn-primary" onclick="openLetter()">Open my letter 💌</button>
+
+      <div class="note-ps">
+        Ps. Love 😘
       </div>
-    </div>
 
-    <article class="paper" id="paper">
-      <div class="stamp">💗 🌷</div>
-      <div class="letter-date">A LITTLE NOTE, WRITTEN WITH LOVE</div>
-      <h3>My dearest Hrudya,</h3>
+      <div class="note-heart">♡</div>
 
-      <p>Meri pyaari si Hrudya, 🥹❤️</p>
-
-      <p>
-        Pata hai, main shayad har baar sahi words nahi bol pata,
-        aur kabhi-kabhi galti bhi kar deta hoon. But tumhari feelings
-        mere liye important hain. Agar meri kisi baat se tumhe hurt hua,
-        toh I'm genuinely sorry, meri jaan.
-      </p>
-
-      <p>
-        Main tumhe bas isliye nahi manana chahta ki tumhara gussa khatam
-        ho jaaye. Main chahta hoon ki tumhe lage ki tumhari baat suni jaati
-        hai, tumhe samjha jaata hai, aur tum mere liye kitni special ho.
-      </p>
-
-      <p>
-        Tumhari smile bahut pyaari hai, tumhara nakhra bhi thoda sa pyaara
-        hai 😭💕, aur tumhara khush rehna mere liye bahut matter karta hai.
-        Main perfect nahi hoon, but I want to keep learning how to love you
-        better.
-      </p>
-
-      <p>
-        Toh jab tumhara mann kare, mujhse baat kar lena, okay?
-        Main tumhari baat sununga. No rushing, no pressure.
-      </p>
-
-      <p class="signoff">Aur ab meri ek chhoti si request… 🥺</p>
-      <p class="signature">mann jaao naa mere golu molu se bacche</p>
-
-      <div class="ps">Ps. Love 😘</div>
-      <p style="text-align:right;margin-top:22px">— Tumhara Kaushik ❤️</p>
-      <div class="btn-row" style="margin-top:25px">
-        <button class="btn btn-primary" onclick="sendHug()">A hug for you 🫂</button>
-        <button class="btn btn-soft" onclick="goTo('mood')">One more surprise 🌷</button>
+      <div class="note-actions">
+        <button class="btn btn-primary" onclick="sendHug()">
+          Send love back ♡
+        </button>
       </div>
     </article>
   </div>
 </section>
 
-<!-- SCENE 4: MOOD -->
-<section class="scene mood-scene" id="mood">
-  <span class="decor d1">🌸</span>
-  <span class="decor d4">💞</span>
-  <div class="wrap">
-    <div class="section-heading">
-      <div class="eyebrow">A tiny mood check</div>
-      <h2>How's my Golu Molu feeling? 🌷</h2>
-      <p class="sub">Choose whichever feels right. You don't have to pretend you're okay.</p>
+<!-- INTERACTIVE ENDING -->
+<section class="scene ending" id="ending">
+  <span class="sticker sticker-bear">🧸</span>
+  <span class="sticker sticker-bow">🎀</span>
+
+  <div class="ending-inner">
+    <div class="heart-big">💗</div>
+
+    <div class="section-overline">A little love, always</div>
+    <h2>For my favourite human.</h2>
+
+    <p>Some things are better said with a little heart.</p>
+
+    <div class="hero-actions">
+      <button class="btn btn-primary" onclick="makeItRain()">
+        A little love shower ✨
+      </button>
+
+      <button class="btn btn-secondary" onclick="goTo('home')">
+        Start again ♡
+      </button>
     </div>
 
-    <div class="mood-board">
-      <div class="mood-face" id="moodFace">🥺💗</div>
-      <div class="mood-options">
-        <button onclick="setMood('😤','Still a little upset — and that’s okay. I’m ready to listen. ❤️')">Still gussa 😤</button>
-        <button onclick="setMood('🥹','A little softer… sending you a gentle hug. 🫂')">Thoda maan gayi 🥹</button>
-        <button onclick="setMood('🫂','Big warm hug incoming. No words needed. 💗')">Need a hug 🫂</button>
-        <button onclick="setMood('🥰','There’s my favourite smile! Keep it for yourself, too. 🌷')">Ready to smile 🥰</button>
-      </div>
-      <p class="mood-result" id="moodResult" aria-live="polite">Your feelings are welcome here, Hrudya. 💗</p>
-    </div>
-  </div>
-</section>
-
-<!-- SCENE 5: ENDING -->
-<section class="scene final">
-  <span class="decor d1">🎀</span>
-  <span class="decor d2">✨</span>
-  <span class="decor d3">🌷</span>
-  <span class="decor d4">💗</span>
-
-  <div class="wrap">
-    <div class="big-heart">💖</div>
-    <div class="eyebrow">One last thing, my love</div>
-    <h2 class="display">You mean a lot to me, Hrudya.</h2>
-    <p class="sub">
-      You don't have to stop being upset just to make me happy.
-      I want us to understand each other and be okay, together.
-    </p>
-    <div class="btn-row">
-      <button class="btn btn-primary" onclick="celebrate()">Sending you all my love 💗</button>
-      <button class="btn btn-soft" onclick="goTo('letter')">Read my letter again 💌</button>
-    </div>
-    <p id="ending" class="sub" style="margin-top:22px;min-height:35px"></p>
+    <p id="endingMessage" style="margin-top:25px;min-height:22px"></p>
   </div>
 </section>
 
 <footer class="footer">
-  <div style="font-size:25px">🧸 💗 🌷</div>
-  Made with love by Kaushik, especially for Hrudya.<br>
-  <span>One little website. One very special girl. Endless affection. 😘</span>
+  A LITTLE WEBSITE · MADE WITH LOVE ♡
 </footer>
 
 <div id="toast" role="status" aria-live="polite"></div>
 
 <script>
 function goTo(id){
-  document.getElementById(id).scrollIntoView({behavior:"smooth",block:"start"});
+  document.getElementById(id).scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
 }
 
 function showToast(message){
   const toast=document.getElementById("toast");
   toast.textContent=message;
   toast.classList.add("show");
-  clearTimeout(window.toastTimer);
-  window.toastTimer=setTimeout(()=>toast.classList.remove("show"),3000);
+
+  clearTimeout(window.toastTimeout);
+
+  window.toastTimeout=setTimeout(()=>{
+    toast.classList.remove("show");
+  },2800);
 }
 
 function openLetter(){
   const envelope=document.getElementById("envelope");
-  const paper=document.getElementById("paper");
+  const note=document.getElementById("note");
+
   envelope.classList.add("open");
-  paper.classList.add("show");
-  setTimeout(()=>paper.scrollIntoView({behavior:"smooth",block:"center"}),150);
-  hearts(12);
+  note.classList.add("show");
+
+  envelope.setAttribute("aria-label","Letter opened");
+
+  setTimeout(()=>{
+    note.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+  },250);
+
+  floatHearts(12);
 }
 
 document.getElementById("envelope").addEventListener("keydown",function(e){
-  if(e.key==="Enter"||e.key===" "){e.preventDefault();openLetter();}
+  if(e.key==="Enter"||e.key===" "){
+    e.preventDefault();
+    openLetter();
+  }
 });
 
-function hearts(count){
-  const symbols=["💗","💕","💖","🌷","✨","🎀"];
+function sendHug(){
+  showToast("A warm little hug, just for you. 🧸💗");
+  floatHearts(20);
+}
+
+function floatHearts(count){
+  const symbols=["♡","💗","💕","🌸","✨","🎀"];
+
   for(let i=0;i<count;i++){
     setTimeout(()=>{
       const heart=document.createElement("span");
@@ -426,44 +562,40 @@ function hearts(count){
       heart.textContent=symbols[Math.floor(Math.random()*symbols.length)];
       heart.style.left=Math.random()*100+"vw";
       heart.style.fontSize=(17+Math.random()*22)+"px";
-      heart.style.animationDuration=(3+Math.random()*2)+"s";
+      heart.style.animationDuration=(3.5+Math.random()*2.5)+"s";
+
       document.body.appendChild(heart);
-      setTimeout(()=>heart.remove(),5500);
-    },i*65);
+
+      setTimeout(()=>heart.remove(),6500);
+    },i*70);
   }
 }
 
-function sendHug(){
-  showToast("A very warm hug is on its way to you, Hrudya. 🧸🫂💗");
-  hearts(22);
-}
+function makeItRain(){
+  document.getElementById("endingMessage").textContent=
+    "♡ ♡ ♡";
 
-function setMood(emoji,message){
-  document.getElementById("moodFace").textContent=emoji;
-  document.getElementById("moodResult").textContent=message;
-  hearts(6);
-}
-
-function celebrate(){
-  document.getElementById("ending").textContent=
-    "mann jaao naa mere golu molu se bacche 🥺💗 Ps. Love 😘 — Kaushik";
-  hearts(45);
-  showToast("A little shower of love, especially for Hrudya! 💖");
+  floatHearts(48);
+  showToast("A little shower of love, just for Hrudya. 💗");
 }
 
 let heartTimer=setInterval(()=>{
   if(document.hidden)return;
+
   const heart=document.createElement("span");
   heart.className="heart-float";
-  heart.textContent=["♡","💗","💕","✨"][Math.floor(Math.random()*4)];
+  heart.textContent=["♡","💗","✦","💕"][Math.floor(Math.random()*4)];
   heart.style.left=Math.random()*100+"vw";
-  heart.style.fontSize=(15+Math.random()*13)+"px";
+  heart.style.fontSize=(14+Math.random()*15)+"px";
   heart.style.animationDuration=(5+Math.random()*3)+"s";
+
   document.body.appendChild(heart);
   setTimeout(()=>heart.remove(),8500);
-},1700);
+},2000);
 
-window.addEventListener("pagehide",()=>clearInterval(heartTimer));
+window.addEventListener("pagehide",()=>{
+  clearInterval(heartTimer);
+});
 </script>
 </body>
 </html>
